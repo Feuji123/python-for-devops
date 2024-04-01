@@ -17,7 +17,27 @@ print(message)
 ```
 
 In this example, `greet` is a function that takes a `name` argument and returns a greeting message.
+*******************
+a=2
+b=4
 
+def add():
+    add=a+b
+    print(add)
+def sub():
+    sub=a-b
+    print(sub)
+def mul():
+    mul=a*b
+    print(mul)
+def div():
+    div=a/b
+    print(div)
+add()                
+sub()
+mul()
+div()
+***************
 ### Modules
 
 A module is a Python script containing Python code. It can define functions, classes, and variables that can be used in other Python scripts. Modules help organize and modularize your code, making it more maintainable.
