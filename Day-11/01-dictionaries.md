@@ -13,6 +13,31 @@ my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
 print(my_dict['name'])  # Output: John
 ```
 
+students_info = [{'name': 'John', 'age': 25, 'city': 'New York'},{'name': 'wick', 'age': 27, 'city': 'Sydney'}]
+print(students_info[1]['name'])
+output: wick
+
+students_info = [{'name': 'John', 'age': 25, 'city': 'New York'},{'name': 'wick', 'age': 27, 'city': 'Sydney'}]
+print(students_info[0]['city'])
+output: New York
+
+                          (or)
+
+students_info = [
+    {
+        'name': 'John', 
+        'age': 25, 
+        'city': 'New York'
+    },
+    {
+        'name': 'wick', 
+        'age': 27, 
+        'city': 'Sydney'
+    }
+]
+print(students_info[0]['city'])
+
+
 ## Modifying and Adding Elements:
 ```python
 my_dict['age'] = 26  # Modifying a value

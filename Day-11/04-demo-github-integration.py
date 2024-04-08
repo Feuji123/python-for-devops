@@ -31,3 +31,32 @@ if response.status_code == 200:
         print(f"{creator}: {count} PR(s)")
 else:
     print(f"Failed to fetch data. Status code: {response.status_code}")
+
+___________________________________________________________________________________
+
+import requests
+response = requests.get("https://api.github.com/repos/kubernetes/kubernetes/pulls")
+print(response)
+print(type(response))
+
+output:
+<Response [200]>
+<class 'requests.models.Response'>
+
+import requests
+response = requests.get("https://api.github.com/repos/kubernetes/kubernetes/pulls")
+print(response.json())      ---> to print what you see in web (Convert the JSON response to a dictionary)
+print(response.status_code)    ---> to check whether api call is success or not.  200 - success
+
+complete_detail=response.json()
+print(complete_detail[0]["id"])      ----> output: <id> of 1st item
+
+print(complete_detail[0]["user"]["login"]) ---> to get the first login username
+
+import requests
+response = requests.get("https://api.github.com/repos/kubernetes/kubernetes/pulls")
+complete_detail=response.json()
+for i in range(len(complete_detail)):
+    print(complete_detail[i]["user"]["login"])   --? list all users login usernames 
+_____________________________________________________________________________________________
+
